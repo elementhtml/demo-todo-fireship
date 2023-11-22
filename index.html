@@ -5,9 +5,9 @@
 <head>
 
     <title>Demo Fireship Todo</title>
-    <script type="module" src='../element/element.js?load&expose'></script>
-    <!-- <script type="module" -->
-    <!-- src='https://cdn.jsdelivr.net/gh/elementhtml/element@bd60c9f91085134644c917bdddbd4b3c0d8e714f/element.js?load'></script> -->
+    <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@bd60c9f91085134644c917bdddbd4b3c0d8e714f/element.js?load'></script>
     <meta is="e-pipe" id="storage" source="`sessionStorage.setItem(todos)!getItem(todos)`" content-type="json"
         transform="[]+">
     <meta is="e-data" resource=":|form|_submit" target="#storage" transform="$.todo" apply="write()">
