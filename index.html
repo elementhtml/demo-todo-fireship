@@ -5,17 +5,18 @@
 <head>
 
     <title>Demo Fireship Todo</title>
-    <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
     <script type="module"
-        src='https://cdn.jsdelivr.net/gh/elementhtml/element@bd60c9f91085134644c917bdddbd4b3c0d8e714f/element.js?load'></script>
-    <meta is="e-pipe" id="storage" source="`sessionStorage.setItem(todos)!getItem(todos)`" content-type="json"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@a894a2db8d386e22ba3c43253eb81ab4a82acd7b/element.js?load'></script>
+
+    <meta is="e-pipe" id="storage" source="`localStorage.setItem(todos)!getItem(todos)`" content-type="json"
         transform="[]+">
-    <meta is="e-data" resource=":|form|_submit" target="#storage" transform="$.todo" apply="write()">
-    <meta is="e-data" resource="#storage|_" target="#todos">
+    <meta is="e-data" resource=":|form|_" target="#storage" transform="$.todo" apply="write()" force>
+    <meta is="e-data" resource="#storage|_" target=":|body" transform='{"`#todos`": $, "`form input[name=todo]`": ""}'>
 
 </head>
 
-<body style="background-color: black; color: white;">
+<body style="background: black; color: white;">
+
     <ul id="todos"></ul>
 
     <form>
