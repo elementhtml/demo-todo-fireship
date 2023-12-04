@@ -7,7 +7,7 @@
     <title>Demo Fireship Todo</title>
     <script type="module" src='../element/element.js?load&expose'></script>
     <!-- <script type="module" -->
-    <!-- src='https://cdn.jsdelivr.net/gh/elementhtml/element@a894a2db8d386e22ba3c43253eb81ab4a82acd7b/element.js?load'></script> -->
+    <!-- src='https://cdn.jsdelivr.net/gh/elementhtml/element@f397de64911ffbeed2a29dbb8a9ac9beebbab1c7/element.js?load'></script> -->
 
     <meta is="e-pipe" :="`localStorage.setItem(todos) -> getItem(todos)`" sync="todos" content-type="json">
     <meta is="e-map" :=':|input[name=todo] >> [$append($cell, $.value)] >> todos'>
