@@ -11,7 +11,8 @@
 
     <meta is="e-pipe" :="`sessionStorage.setItem(todos)!getItem(todos)`" sync="todos" content-type="json">
     <meta is="e-map" :=':|input[name=todo] >> [$append($cell, $.value)] >> todos'>
-    <meta is="e-map" :='todos >> {"<li>": $, "`:|form input`": {"value": "", "focus()": true}} >> :|#todos'>
+    <meta is="e-map"
+        :='todos >> {"<li>": $, "`:|form`": {"!": null, "`input`": {"value": "", "focus()": true}}} >> :|#todos'>
 
 </head>
 
@@ -20,12 +21,9 @@
     <ul id="todos"></ul>
     <form>
         <input name="todo" type="text" placeholder="What needs to be done?">
-        <input type="button" value="Add Todo">
+        <input type="submit" value="Add Todo">
     </form>
 
-    <script type="module">
-        //E.getCell('todos').eventTarget.addEventListener('change', event => console.log(event.target.value))
-    </script>
 </body>
 
 </html>
