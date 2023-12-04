@@ -11,7 +11,7 @@
 
     <!-- <meta is="e-pipe" :="`localStorage.setItem(todos)!getItem(todos)`" sync="todos"> -->
     <meta is="e-map" :=':|input[name=todo] >> [$append($cell, $.value)] >> todos'>
-    <meta is="e-map" :='todos >> {"<li>": $} >> :|#todos'>
+    <meta is="e-map" :='todos >> {"<li>": $, "`:|form input`": {"value": "", "focus()": true}} >> :|#todos'>
 
 </head>
 
