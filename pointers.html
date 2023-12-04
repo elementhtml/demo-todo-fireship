@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <title>Demo Fireship Todo (Pointers only version)</title>
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@a894a2db8d386e22ba3c43253eb81ab4a82acd7b/element.js?load'></script>
+
+    <meta is="e-pipe" id="storage" source="`localStorage.setItem(todos)!getItem(todos)`" content-type="json"
+        transform="[]+">
+    <meta is="e-data" resource=":|form|_" target="#storage" transform="$.todo" apply="write()" force>
+    <meta is="e-data" resource="#storage|_" target=":|body" transform='{"`#todos`": $, "`form input[name=todo]`": ""}'>
+
+</head>
+
+<body style="background: black; color: white;">
+
+    <ul id="todos"></ul>
+
+    <form>
+        <input name="todo" type="text" placeholder="What needs to be done?">
+        <input type="submit" value="Add Todo">
+    </form>
+
+</body>
+
+</html>
