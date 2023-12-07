@@ -5,13 +5,13 @@
 <head>
 
     <title>Demo Fireship Todo</title>
-    <script type="module" src='../element/element.js?load&expose'></script>
-    <!-- <script type="module" -->
-    <!-- src='https://cdn.jsdelivr.net/gh/elementhtml/element@f397de64911ffbeed2a29dbb8a9ac9beebbab1c7/element.js?load'></script> -->
+    <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@bd6d76654725e3ae8ef98001d3947e4ed6d5ad78/element.js?load'></script>
 
     <meta is="e-pipe" :="`localStorage.setItem(todos) -> getItem(todos)`" sync="todos" content-type="json">
-    <meta is="e-map" :=':|input[name=todo] >> [$append($cell, $.value)] >> todos'>
-    <meta is="e-map"
+    <meta is="e-cmap" :=':|input[name=todo] >> [$append($cell, $.value)] >> todos'>
+    <meta is="e-cmap"
         :='todos >> {"<li>": $, "`:|form`": {"!": null, "`input`": {"value": "", "focus()": true}}} >> :|#todos'>
 
 </head>
