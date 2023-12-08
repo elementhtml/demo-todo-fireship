@@ -8,14 +8,14 @@
     <title>Demo Fireship Todo</title>
     <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
     <script type="module"
-        src='https://cdn.jsdelivr.net/gh/elementhtml/element@c59f0f129e41fccaa9a0077dcfe44f1045eab3a8/element.js?load'></script>
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@705d0f9394ac879d5c51ac8e7e955bdd3d4b831b/element.js?load'></script>
 
 
-    <meta is="e-p" :="todos >> $ >> store`localStorage.setItem('todos', $)`" content-type="json">
-    <meta is="e-p" :="todos << $ << store`localStorage.getItem('todos', $)`" content-type="json">
-    <meta is="e-d" :='todos >> 
+    <meta is="e-proxy" :="todos >> $ >> store`localStorage.setItem('todos', $)`" content-type="json">
+    <meta is="e-proxy" :="todos << $ << store`localStorage.getItem('todos', $)`" content-type="json">
+    <meta is="e-dom" :='todos >> 
         {"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}} >> :|#todos'>
-    <meta is="e-d" :='todos << [$append($cell.value, $._.todo)] << :|form!submit' prevent>
+    <meta is="e-dom" :='todos << [$append($cell.value, $._.todo)] << :|form!submit' prevent>
 
 </head>
 
