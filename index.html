@@ -12,11 +12,9 @@
 
     <meta is="e-p" :="todos >> $ >> store`sessionStorage.setItem('todos', $)`" content-type="json">
     <meta is="e-p" :="todos << $ << store`sessionStorage.getItem('todos', $)`" content-type="json">
-
     <meta is="e-d" :='todos >> 
         {"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}} >> :|#todos'>
     <meta is="e-d" :='todos << [$append($cell.value, $._.todo)] << :|form!submit' prevent>
-
 
 </head>
 
