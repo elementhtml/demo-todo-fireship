@@ -10,8 +10,8 @@
     <!-- <script type="module"
         src='https://cdn.jsdelivr.net/gh/elementhtml/element@bd6d76654725e3ae8ef98001d3947e4ed6d5ad78/element.js?load'></script> -->
 
-    <meta is="e-p" :="todos >> $ >> store`sessionStorage.setItem('todos', $)`" content-type="json">
-    <meta is="e-p" :="todos << $ << store`sessionStorage.getItem('todos', $)`" content-type="json">
+    <meta is="e-p" :="todos >> $ >> store`localStorage.setItem('todos', $)`" content-type="json">
+    <meta is="e-p" :="todos << $ << store`localStorage.getItem('todos', $)`" content-type="json">
     <meta is="e-d" :='todos >> 
         {"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}} >> :|#todos'>
     <meta is="e-d" :='todos << [$append($cell.value, $._.todo)] << :|form!submit' prevent>
