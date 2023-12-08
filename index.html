@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Demo Fireship Todo</title>
-    <script type="module" src='../element/element.js?load&expose'></script>
-    <!-- <script type="module"
-        src='https://cdn.jsdelivr.net/gh/elementhtml/element@bd6d76654725e3ae8ef98001d3947e4ed6d5ad78/element.js?load'></script> -->
+    <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
+    <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@c59f0f129e41fccaa9a0077dcfe44f1045eab3a8/element.js?load'></script>
+
 
     <meta is="e-p" :="todos >> $ >> store`localStorage.setItem('todos', $)`" content-type="json">
     <meta is="e-p" :="todos << $ << store`localStorage.getItem('todos', $)`" content-type="json">
