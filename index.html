@@ -8,13 +8,13 @@
     <title>Demo Fireship Todo</title>
     <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
     <script type="module"
-        src='https://cdn.jsdelivr.net/gh/elementhtml/element@252def95d32dac7ef4004b973c7a92fa80bc433c/element.js?load'></script>
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@1173b30592d834f0010a737f4ff0f32a9960bf0c/element.js?load'></script>
 
-    <meta is="e-proxy" :="todos >> $ >> store`localStorage.setItem('todos', $)`" content-type="json">
-    <meta is="e-proxy" :="todos << $ << store`localStorage.getItem('todos', $)`" content-type="json">
-    <meta is="e-dom" :='todos >> 
-        {"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}} >> :|#todos'>
-    <meta is="e-dom" :='todos << [$append($cell.value, $._.todo)] << :|form!submit' prevent>
+    <script is="e-flow" type="script/flow">
+        `sessionStorage.getItem(todos)` >> ($ ? $eval($) : null) >> %todos >> ($ ? $string($) : null) >> `sessionStorage.setItem(todos, ${})`
+        %todos >> ({"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}}) >> $(:|#todos)
+        $(:|form) >> ([$append($fields.todos, $._named.todo)]) >> %todos
+    </script>
 
 </head>
 
