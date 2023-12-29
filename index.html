@@ -11,7 +11,7 @@
         src='https://cdn.jsdelivr.net/gh/elementhtml/element@1173b30592d834f0010a737f4ff0f32a9960bf0c/element.js?load'></script>
 
     <script is="e-flow" type="script/flow">
-        `sessionStorage.getItem(todos)` >> ($ ? $eval($) : null) >> %todos >> ($ ? $string($) : null) >> `sessionStorage.setItem(todos, ${})`
+        `localStorage.getItem(todos)` >> ($ ? $eval($) : null) >> %todos >> ($ ? $string($) : null) >> `localStorage.setItem(todos, ${})`
         %todos >> ({"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}}) >> $(:|#todos)
         $(:|form) >> ([$append($fields.todos, $._named.todo)]) >> %todos
     </script>
