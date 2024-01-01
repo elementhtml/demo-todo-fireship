@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Demo Fireship Todo</title>
-    <!-- <script type="module" src='../element/element.js?load&expose'></script> -->
-    <script type="module"
-        src='https://cdn.jsdelivr.net/gh/elementhtml/element@5dbad33b2dddff1547013e85919a0920795990a9/element.js?load'></script>
+    <script type="module" src='../element/element.js?load&expose'></script>
+    <!-- <script type="module"
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@5dbad33b2dddff1547013e85919a0920795990a9/element.js?load'></script> -->
 
     <script is="e-flowscript" type="script/flow">
         `localStorage.getItem(todos)` >> ($ ? $eval($) : null) >> %todos >> ($ ? $string($) : null) >> `localStorage.setItem(todos, ${})`
