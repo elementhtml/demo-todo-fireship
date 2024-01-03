@@ -8,10 +8,10 @@
     <title>Demo Fireship Todo</title>
     <meta name="description"
         content="Demo application for the Element framework, implementing the simple todo app from the Fireship YouTube channel.">
-    <!-- <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script> -->
-    <script type="module"
+    <script type="module" src='../element/element.js?load&expose' async fetchpriority="low"></script>
+    <!-- <script type="module"
         src='https://cdn.jsdelivr.net/gh/elementhtml/element@66a50a10f51cf4012667fd41bb5c41830f9cb36f/element.js?load'
-        async fetchpriority="low"></script>
+        async fetchpriority="low"></script> -->
 
     <script is="e-flowscript" type="script/flow">
         `localStorage.getItem(todos)` >> ($ ? $eval($) : null) >> %todos >> ($ ? $string($) : null) >> `localStorage.setItem(todos, ${})`
