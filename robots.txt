@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /css/
-Disallow: /packages/
-Disallow: /theme/
-Disallow: /transforms/
 Disallow: /README.md
