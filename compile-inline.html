@@ -7,19 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline' 'self';
-            script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'unsafe-inline' 'self' blob: https://cdn.jsdelivr.net https://static.cloudflareinsights.com/; script-src-attr 'none';
+            script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' blob: https://cdn.jsdelivr.net https://static.cloudflareinsights.com/; script-src-attr 'none';
             connect-src 'self' https://cdn.jsdelivr.net https://cloudflareinsights.com; object-src 'none'; base-uri 'self'">
     <title>Demo Minimum Todo</title>
     <meta name="description"
         content="Demo application for the Element framework, implementing the simple todo app from the Fireship YouTube channel.">
 
+
     <link rel="modulepreload"
-        href="https://cdn.jsdelivr.net/gh/elementhtml/element@cab2b1dd0687fbf257b8c5227705174ff1eeeaae/element.js?dev&expose&load&packages">
+        href="https://cdn.jsdelivr.net/gh/elementhtml/element@cab2b1dd0687fbf257b8c5227705174ff1eeeaae/element.js?compile&dev&expose&load">
     <script type="module"
-        src='https://cdn.jsdelivr.net/gh/elementhtml/element@cab2b1dd0687fbf257b8c5227705174ff1eeeaae/element.js?dev&expose&load&packages'
+        src='https://cdn.jsdelivr.net/gh/elementhtml/element@cab2b1dd0687fbf257b8c5227705174ff1eeeaae/element.js?compile&dev&expose&load'
         async fetchpriority="low"></script>
 
-    <script type="application/element" src="app"></script>
+    <script type="directives/element">
+        `localStorage.getItem(todos)` >> ($ ? $eval($) : null) >> @todos >> ($ ? $string($) : null) >> `localStorage.setItem(todos, ${})`
+        @todos >> ({"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}}) >> $(#todos)
+        $(form) >> ([$append($fields.todos, $._named.todo)]) >> @todos
+    </script>
 
 </head>
 

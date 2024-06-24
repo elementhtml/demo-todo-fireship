@@ -1,0 +1,254 @@
+{
+    "fieldNames": [
+        "todos"
+    ],
+    "cellNames": [],
+    "statements": [
+        {
+            "labels": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "steps": [
+                {
+                    "label": "0",
+                    "params": {
+                        "handler": "proxy",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "childArgs": [
+                                    "todos"
+                                ],
+                                "childMethodName": "getItem",
+                                "parentArgs": [
+                                    ""
+                                ],
+                                "parentObjectName": "localStorage",
+                                "useHelper": false
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "1",
+                    "params": {
+                        "handler": "transform",
+                        "ctx": {
+                            "vars": {
+                                "expression": "($ ? $eval($) : null)"
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "2",
+                    "params": {
+                        "handler": "state",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "names": {
+                                    "cell": [],
+                                    "field": [
+                                        "todos"
+                                    ]
+                                },
+                                "signal": true,
+                                "group": {
+                                    "name": "todos",
+                                    "type": "field",
+                                    "field": {
+                                        "type": "field",
+                                        "eventTarget": {},
+                                        "value": [
+                                            "hj",
+                                            "kjh",
+                                            "kjhk"
+                                        ],
+                                        "fieldName": "todos"
+                                    }
+                                },
+                                "config": "single"
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "3",
+                    "params": {
+                        "handler": "transform",
+                        "ctx": {
+                            "vars": {
+                                "expression": "($ ? $string($) : null)"
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "4",
+                    "params": {
+                        "handler": "proxy",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "childArgs": [
+                                    "todos",
+                                    "${}"
+                                ],
+                                "childMethodName": "setItem",
+                                "parentArgs": [
+                                    ""
+                                ],
+                                "parentObjectName": "localStorage",
+                                "useHelper": false
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "labels": [
+                "0",
+                "1",
+                "2"
+            ],
+            "steps": [
+                {
+                    "label": "0",
+                    "params": {
+                        "handler": "state",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "names": {
+                                    "cell": [],
+                                    "field": [
+                                        "todos"
+                                    ]
+                                },
+                                "signal": true,
+                                "group": {
+                                    "name": "todos",
+                                    "type": "field",
+                                    "field": {
+                                        "type": "field",
+                                        "eventTarget": {},
+                                        "value": [
+                                            "hj",
+                                            "kjh",
+                                            "kjhk"
+                                        ],
+                                        "fieldName": "todos"
+                                    }
+                                },
+                                "config": "single"
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "1",
+                    "params": {
+                        "handler": "transform",
+                        "ctx": {
+                            "vars": {
+                                "expression": "({\"<li>\": $, \"`:|form`\": {\"`input`\": {\"value\": \"\", \"focus()\": {}}}})"
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "2",
+                    "params": {
+                        "handler": "selector",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "scopeStatement": ":document",
+                                "selectorStatement": "#todos",
+                                "signal": true,
+                                "selector": "#todos",
+                                "scope": {}
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "labels": [
+                "0",
+                "1",
+                "2"
+            ],
+            "steps": [
+                {
+                    "label": "0",
+                    "params": {
+                        "handler": "selector",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "scopeStatement": ":root",
+                                "selectorStatement": "form",
+                                "signal": true,
+                                "selector": "form",
+                                "scope": {}
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "1",
+                    "params": {
+                        "handler": "transform",
+                        "ctx": {
+                            "vars": {
+                                "expression": "([$append($fields.todos, $._named.todo)])"
+                            }
+                        }
+                    }
+                },
+                {
+                    "label": "2",
+                    "params": {
+                        "handler": "state",
+                        "ctx": {
+                            "binder": true,
+                            "vars": {
+                                "names": {
+                                    "cell": [],
+                                    "field": [
+                                        "todos"
+                                    ]
+                                },
+                                "signal": true,
+                                "group": {
+                                    "name": "todos",
+                                    "type": "field",
+                                    "field": {
+                                        "type": "field",
+                                        "eventTarget": {},
+                                        "value": [
+                                            "hj",
+                                            "kjh",
+                                            "kjhk"
+                                        ],
+                                        "fieldName": "todos"
+                                    }
+                                },
+                                "config": "single"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "cid": "bafkreigy3oz6m6qusp443joyavzbij23tox6faspibhnnty6w7f2mp7glu"
+}

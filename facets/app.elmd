@@ -1,0 +1,3 @@
+`localStorage.getItem(todos)` >> ($ ? $eval($) : null) >> @todos >> ($ ? $string($) : null) >> `localStorage.setItem(todos, ${})`
+@todos >> ({"<li>": $, "`:|form`": {"`input`": {"value": "", "focus()": {}}}}) >> $(#todos)
+$(form) >> ([$append($fields.todos, $._named.todo)]) >> @todos
